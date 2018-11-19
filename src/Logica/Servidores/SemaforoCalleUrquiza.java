@@ -11,9 +11,6 @@ public class SemaforoCalleUrquiza {
     private EstadoSemaforo estadoSemaforo;
     private double tiempoEnEstado;
     private double proxCambioDeSemaforo;
-    private double proxCambioDeSemaforoAVerde;
-    private double proxCambioDeSemaforoAAmarillo;
-    private double proxCambioDeSemaforoARojo;
     private int cantidadDeAutos;
     private LinkedList<Auto> cola;
 
@@ -70,22 +67,6 @@ public class SemaforoCalleUrquiza {
     public void setTiempoEnEstado(double tiempoEnEstado) {
         this.tiempoEnEstado = tiempoEnEstado;
     }
-
-    public double getProxCambioDeSemaforoAVerde()
-    {
-        return Reloj.getInstancia().getTiempoActual()+90;
-    }
-
-    public double getProxCambioDeSemaforoAAmarillo()
-    {
-        return Reloj.getInstancia().getTiempoActual()+90;
-    }
-
-    public double getProxCambioDeSemaforoARojo()
-    {
-        return Reloj.getInstancia().getTiempoActual()+90;
-    }
-
 
     public void setProxCambioDeSemaforo(double proxCambioDeSemaforo) {
         this.proxCambioDeSemaforo = proxCambioDeSemaforo;
