@@ -162,20 +162,22 @@ public class Gestor {
         if (servidorSemaforoCalleCólon.getProxCambioDeSemaforo() < minTiempo && servidorSemaforoCalleCólon.getProxCambioDeSemaforo() !=0) {
             minTiempo = servidorSemaforoCalleCólon.getProxCambioDeSemaforo();
         }
+        if(servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo() < minTiempo && servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo() !=0) {
+            minTiempo=servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo();
+        }
         if (llegadaDeAutoCalleUrquiza.getProxLlegadaAuto() < minTiempo && llegadaDeAutoCalleUrquiza.getProxLlegadaAuto()!=0){
             minTiempo=llegadaDeAutoCalleUrquiza.getProxLlegadaAuto();
         }
         if(llegadaDeAutoCalleColón.getProxLlegadaAuto() < minTiempo && llegadaDeAutoCalleColón.getProxLlegadaAuto() !=0){
             minTiempo=llegadaDeAutoCalleColón.getProxLlegadaAuto();
         }
-        if(cruceDeInterseccionCalleUrquiza.getProxCruce() < minTiempo && cruceDeInterseccionCalleUrquiza.getProxCruce()!=0)
-        {
+        if(cruceDeInterseccionCalleUrquiza.getProxCruce() < minTiempo && cruceDeInterseccionCalleUrquiza.getProxCruce()!=0) {
             minTiempo= cruceDeInterseccionCalleUrquiza.getProxCruce();
         }
-        if(cruceDeInterseccionCalleColón.getProxCruce()< minTiempo && cruceDeInterseccionCalleColón.getProxCruce() !=0)
-        {
+        if(cruceDeInterseccionCalleColón.getProxCruce()< minTiempo && cruceDeInterseccionCalleColón.getProxCruce() !=0) {
             minTiempo= cruceDeInterseccionCalleColón.getProxCruce();
         }
+
 
 
         return minTiempo;
