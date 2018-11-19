@@ -184,17 +184,17 @@ public class Gestor {
     public String proxEvento() {
         double tiempo = tiempoMinimo();
 
-        if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
+        if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo() && servidorSemaforoCalleCólon.getEstadoSemaforo()==EstadoSemaforo.EnRojo) {
             return "Cambio de Semaforo a Verde Calle Colón";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo() && servidorSemaforoCalleCólon.getEstadoSemaforo()==EstadoSemaforo.EnVerde) {
             return "Cambio de Semaforo a Amarillo Calle Colón";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo() && servidorSemaforoCalleCólon.getEstadoSemaforo()==EstadoSemaforo.EnAmarillo) {
             return "Cambio de Semaforo a Rojo Calle Colón";
-        }else if (tiempo == servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo()) {
+        }else if (tiempo == servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo() && servidorSemaforoCalleUrquiza.getEstadoSemaforo()==EstadoSemaforo.EnRojo) {
             return "Cambio de Semaforo a Verde Calle Urquiza";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo() && servidorSemaforoCalleUrquiza.getEstadoSemaforo()== EstadoSemaforo.EnVerde) {
             return "Cambio de Semaforo a Amarillo Calle Urquiza";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo() && servidorSemaforoCalleUrquiza.getEstadoSemaforo()==EstadoSemaforo.EnAmarillo) {
             return "Cambio de Semaforo a Rojo Calle Urquiza";
         }else if (tiempo == llegadaDeAutoCalleColón.getProxLlegadaAuto()) {
             return "Llegada Auto Calle Colón";
