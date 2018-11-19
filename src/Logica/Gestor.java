@@ -3,8 +3,6 @@ package Logica;
 import Logica.Eventos.*;
 import Logica.Servidores.SemaforoCalleColón;
 import Logica.Servidores.SemaforoCalleUrquiza;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import util.Fila;
@@ -40,6 +38,8 @@ public class Gestor {
         this.servidorSemaforoCalleCólon =new SemaforoCalleColón();
         this.llegadaDeAutoCalleUrquiza = new LlegadaDeAutoCalleUrquiza(getServidorSemaforoCalleUrquiza());
         this.llegadaDeAutoCalleColón = new LlegadaDeAutoCalleColón(getServidorSemaforoCalleCólon());
+        this.cruceDeInterseccionCalleUrquiza= new CruceDeInterseccionCalleUrquiza(getServidorSemaforoCalleUrquiza());
+        this.cruceDeInterseccionCalleColón= new CruceDeInterseccionCalleColón(getServidorSemaforoCalleCólon());
     }
 
     public void inicio()
@@ -69,7 +69,7 @@ public class Gestor {
                     Reloj.getInstancia().setTiempoActual(llegadaDeAutoCalleColón.getProxLlegadaAuto());
                     llegadaDeAutoCalleColón.ejecutar();
                     this.llegadaDeAutoCalleColón.setAuto(llegadaDeAutoCalleColón.generarAuto());
-                    //this.cargarFila():
+                    //this.cargarFila();
                     break;
 
                 case "Llegada Auto Calle Urquiza":
@@ -78,7 +78,7 @@ public class Gestor {
                     Reloj.getInstancia().setTiempoActual(llegadaDeAutoCalleUrquiza.getProxLlegadaAuto());
                     llegadaDeAutoCalleUrquiza.ejecutar();
                     this.llegadaDeAutoCalleUrquiza.setAuto(llegadaDeAutoCalleUrquiza.generarAuto());
-                    //this.cargarFila():
+                    //this.cargarFila();
                     break;
 
                 case "Cruce De Interseccion Calle Urquiza":
@@ -86,7 +86,7 @@ public class Gestor {
                     {
                         cruceDeInterseccionCalleUrquiza= new CruceDeInterseccionCalleUrquiza(servidorSemaforoCalleUrquiza);
                         this.setEventoActual(cruceDeInterseccionCalleUrquiza);
-                        Reloj.getInstancia().setTiempoActual(cruceDeInterseccionCalleUrquiza.getProxCruce(Reloj.getInstancia().getTiempoActual()));
+                        Reloj.getInstancia().setTiempoActual(cruceDeInterseccionCalleUrquiza.getProxCruce());
                         this.getConjuntoEventos().add(this.getEventoActual().getNombre());
                         this.getEventoActual().ejecutar();
                     }
@@ -97,7 +97,7 @@ public class Gestor {
                     {
                         cruceDeInterseccionCalleColón= new CruceDeInterseccionCalleColón(servidorSemaforoCalleCólon);
                         this.setEventoActual(cruceDeInterseccionCalleColón);
-                        Reloj.getInstancia().setTiempoActual(cruceDeInterseccionCalleColón.getProxCruce(Reloj.getInstancia().getTiempoActual()));
+                        Reloj.getInstancia().setTiempoActual(cruceDeInterseccionCalleColón.getProxCruce());
                         this.getConjuntoEventos().add(this.getEventoActual().getNombre());
                         this.getEventoActual().ejecutar();
                     }
@@ -160,9 +160,25 @@ public class Gestor {
         if (servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAAmarillo() != 0) {
             minTiempo = servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAAmarillo();
         }
-        if (servidorSemaforoCalleCólon.getProxCambioDeSemaforo() < minTiempo) {
+        if (servidorSemaforoCalleCólon.getProxCambioDeSemaforo() < minTiempo && servidorSemaforoCalleCólon.getProxCambioDeSemaforo() !=0) {
             minTiempo = servidorSemaforoCalleCólon.getProxCambioDeSemaforo();
         }
+        if (llegadaDeAutoCalleUrquiza.getProxLlegadaAuto() < minTiempo && llegadaDeAutoCalleUrquiza.getProxLlegadaAuto()!=0){
+            minTiempo=llegadaDeAutoCalleUrquiza.getProxLlegadaAuto();
+        }
+        if(llegadaDeAutoCalleColón.getProxLlegadaAuto() < minTiempo && llegadaDeAutoCalleColón.getProxLlegadaAuto() !=0){
+            minTiempo=llegadaDeAutoCalleColón.getProxLlegadaAuto();
+        }
+        if(cruceDeInterseccionCalleUrquiza.getProxCruce() < minTiempo && cruceDeInterseccionCalleUrquiza.getProxCruce()!=0)
+        {
+            minTiempo= cruceDeInterseccionCalleUrquiza.getProxCruce();
+        }
+        if(cruceDeInterseccionCalleColón.getProxCruce()< minTiempo && cruceDeInterseccionCalleColón.getProxCruce() !=0)
+        {
+            minTiempo= cruceDeInterseccionCalleColón.getProxCruce();
+        }
+
+
         return minTiempo;
     }
 
@@ -185,7 +201,7 @@ public class Gestor {
             return "Llegada Auto Calle Colón";
         } else if (tiempo == llegadaDeAutoCalleUrquiza.getProxLlegadaAuto()) {
             return "Llegada Auto Calle Urquiza";
-        }else if (tiempo == cruceDeInterseccionCalleColón.getProxCruce(Reloj.getInstancia().getTiempoActual())) {
+        }else if (tiempo == cruceDeInterseccionCalleColón.getProxCruce()) {
             return "Cruce De Interseccion Calle Colón";
         } else /*(tiempo == cruceDeInterseccionCalleUrquiza.getProxCruce())*/
         {
@@ -207,7 +223,7 @@ public class Gestor {
         String  estadoSemaforoCalleColónContent=servidorSemaforoCalleCólon.getEstadoSemaforo().getName();
         String  rndCruceCalleColónContent=Double.toString(cruceDeInterseccionCalleColón.getRandomCruce()) ;
         String  tiempoDeCruceCalleColónContent=Double.toString(cruceDeInterseccionCalleColón.getTiempoCruce());
-        String  proxCruceCalleColónContent=Double.toString(cruceDeInterseccionCalleColón.getProxCruce(Reloj.getInstancia().getTiempoActual()));
+        String  proxCruceCalleColónContent=Double.toString(cruceDeInterseccionCalleColón.getProxCruce());
         String  colaSemaforoCalleColónContent=Integer.toString(servidorSemaforoCalleCólon.getCola().size());
         String  rnd2Content=Double.toString(llegadaDeAutoCalleUrquiza.getRandomLlegada());;
         String  tiempoEntreLlegadasCalleUrquizaContent=Double.toString(llegadaDeAutoCalleUrquiza.getTiempoLlegada());
@@ -216,7 +232,7 @@ public class Gestor {
         String  estadoSemaforoCalleUrquizaContent=servidorSemaforoCalleUrquiza.getEstadoSemaforo().getName();
         String  rndCruceCalleUrquizaContent=Double.toString(cruceDeInterseccionCalleUrquiza.getRandomCruce());
         String  tiempoDeCruceCalleUrquizaContent=Double.toString(cruceDeInterseccionCalleUrquiza.getTiempoCruce());
-        String  proxCruceCalleUrquizaContent=Double.toString(cruceDeInterseccionCalleUrquiza.getProxCruce(Reloj.getInstancia().getTiempoActual()));
+        String  proxCruceCalleUrquizaContent=Double.toString(cruceDeInterseccionCalleUrquiza.getProxCruce());
         String  colaSemaforoCalleUrquizaContent=Integer.toString(servidorSemaforoCalleUrquiza.getCola().size());
 
         data.add (new Fila(diaContent, relojContent,eventContent,autoContent,rnd1Content,tiempoEntreLlegadasCalleColónContent,

@@ -17,17 +17,14 @@ public class SemaforoCalleUrquiza {
     private int cantidadDeAutos;
     private LinkedList<Auto> cola;
 
-    public SemaforoCalleUrquiza(EstadoSemaforo estadoSemaforo, double tiempoEnEstado, double proxCambioDeSemaforo) {
-        this.estadoSemaforo = estadoSemaforo;
-        this.tiempoEnEstado = tiempoEnEstado;
-        this.proxCambioDeSemaforo = proxCambioDeSemaforo;
+    public SemaforoCalleUrquiza() {
+        this.estadoSemaforo = EstadoSemaforo.EnRojo;
+        this.tiempoEnEstado = 0;
+        this.proxCambioDeSemaforo = 0;
         this.cola = new LinkedList<Auto>();
     }
 
-    public SemaforoCalleUrquiza()
-    {
 
-    }
     public EstadoSemaforo getEstadoSemaforo() {
         return estadoSemaforo;
     }

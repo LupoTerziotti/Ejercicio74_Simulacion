@@ -39,19 +39,19 @@ public class LlegadaDeAutoCalleColón extends Evento {
     {
         Auto auto = new Auto(getContadorAutos(), Reloj.getInstancia().getTiempoActual());
         this.randomLlegada = Math.random();
-        this.calcularTiempoLlegada();
-        this.calcularProxLlegada();
+        this.calcularTiempoLlegadaAuto();
+        this.calcularProxLlegadaAuto();
         return auto;
     }
 
-    public void calcularTiempoLlegada()
+    public void calcularTiempoLlegadaAuto()
     {
         this.setRandomLlegada(Math.random());
         double demora = (2 + 2* this.getRandomLlegada()) * 3600;
         this.tiempoLlegada = (demora / 60);
     }
 
-    public void calcularProxLlegada()
+    public void calcularProxLlegadaAuto()
     {
         setProxLlegadaAuto(this.getTiempoLlegada()+Reloj.getInstancia().getTiempoActual());
     }

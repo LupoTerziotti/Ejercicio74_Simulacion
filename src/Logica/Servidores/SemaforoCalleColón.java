@@ -17,17 +17,14 @@ public class SemaforoCalleColón {
     private int cantidadDeAutos;
     private LinkedList<Auto> cola;
 
-    public SemaforoCalleColón(EstadoSemaforo estadoSemaforo, double tiempoEnEstado, double proxCambioDeSemaforo) {
-        this.estadoSemaforo = estadoSemaforo;
-        this.tiempoEnEstado = tiempoEnEstado;
-        this.proxCambioDeSemaforo = proxCambioDeSemaforo;
+    public SemaforoCalleColón() {
+        this.estadoSemaforo = EstadoSemaforo.EnVerde;
+        this.tiempoEnEstado = 0;
+        this.proxCambioDeSemaforo = 0;
         this.cola = new LinkedList<Auto>();
     }
 
-    public SemaforoCalleColón()
-    {
 
-    }
     public EstadoSemaforo getEstadoSemaforo() {
         return estadoSemaforo;
     }
@@ -82,6 +79,8 @@ public class SemaforoCalleColón {
         cantidadDeAutos++;
 
     }
+
+
 
     public LinkedList<Auto> getCola() {
         return cola;

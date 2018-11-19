@@ -42,7 +42,10 @@ public class CruceDeInterseccionCalleColón extends Evento {
 
     public void proxCruce(double relojActual)
     {
-        this.proxCruce= relojActual + this.tiempoCruce;
+        if(semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
+        {
+            this.proxCruce= tiempoCruce+relojActual;
+        }
     }
     public String getNombre()
     {
@@ -67,13 +70,12 @@ public class CruceDeInterseccionCalleColón extends Evento {
         this.tiempoCruce = tiempoCruce;
     }
 
-    public double getProxCruce(double relojActual) {
-        if(semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
-        {
-           this.proxCruce= tiempoCruce+relojActual;
-        }
+    public double getProxCruce() {
+
         return proxCruce;
     }
+
+
 
     public void setProxCruce(double proxCruce) {
         this.proxCruce = proxCruce;
