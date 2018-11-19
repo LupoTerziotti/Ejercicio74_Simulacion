@@ -43,10 +43,10 @@ public class CruceDeInterseccionCalleUrquiza extends Evento {
         this.tiempoCruce = (demora / 60);
     }
 
-    public void proximoFinDeCruce(double relojActual) {
+    public void CalcluarProximoCruce(double relojActual) {
         if(semaforoCalleUrquiza.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
         {
-            this.proxCruce= tiempoCruce+relojActual;
+            setProxCruce(tiempoCruce+relojActual);
         }
     }
     public String getNombre()

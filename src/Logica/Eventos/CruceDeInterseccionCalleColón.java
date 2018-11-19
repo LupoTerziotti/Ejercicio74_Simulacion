@@ -21,11 +21,11 @@ public class CruceDeInterseccionCalleColón extends Evento {
     {
         if(semaforoCalleColón.getCola().size() >= 2 && semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
         {
-            semaforoCalleColón.getCola().pollFirst();
-            semaforoCalleColón.getCola().pollFirst();
+            this.semaforoCalleColón.getCola().pollFirst();
+            this.semaforoCalleColón.getCola().pollFirst();
         }else if(semaforoCalleColón.getEstadoSemaforo()==EstadoSemaforo.EnVerde)
         {
-            semaforoCalleColón.getCola().pollFirst();
+            this.semaforoCalleColón.getCola().pollFirst();
         }
     }
 
@@ -37,11 +37,10 @@ public class CruceDeInterseccionCalleColón extends Evento {
         this.tiempoCruce = (demora / 60);
     }
 
-    public void proxCruce(double relojActual)
-    {
+    public void CalcluarProximoCruce(double relojActual) {
         if(semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
         {
-            this.proxCruce= tiempoCruce+relojActual;
+            setProxCruce(tiempoCruce+relojActual);
         }
     }
 

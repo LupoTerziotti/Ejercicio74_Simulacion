@@ -2,7 +2,6 @@ package Logica.Eventos;
 
 import Logica.EstadoSemaforo;
 import Logica.Evento;
-import Logica.Servidores.SemaforoCalleColón;
 import Logica.Servidores.SemaforoCalleUrquiza;
 
 public class CambioARojoCalleUrquiza extends Evento {

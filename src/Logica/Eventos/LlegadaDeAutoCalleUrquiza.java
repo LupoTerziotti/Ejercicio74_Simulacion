@@ -66,7 +66,6 @@ public class LlegadaDeAutoCalleUrquiza extends Evento {
         return auto;
     }
 
-
     public void calcularTiempoLlegadaAuto()
     {
         this.setRandomLlegada(Math.random());

@@ -8,13 +8,15 @@ public class CambioAAmarilloCalleUrquiza extends Evento {
 
     private SemaforoCalleUrquiza semaforoCalleUrquiza;
 
+
     public CambioAAmarilloCalleUrquiza(SemaforoCalleUrquiza semaforoCalleUrquiza) {
         this.semaforoCalleUrquiza=semaforoCalleUrquiza;
-        this.semaforoCalleUrquiza.calcularProxCambioDeEstado();
+
     }
     public void ejecutar()
     {
-        semaforoCalleUrquiza.setEstadoSemaforo(EstadoSemaforo.EnAmarillo);
+        this.semaforoCalleUrquiza.setEstadoSemaforo(EstadoSemaforo.EnAmarillo);
+        this.semaforoCalleUrquiza.calcularProxCambioDeEstado();
     }
     public String getNombre()
     {

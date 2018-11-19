@@ -105,5 +105,7 @@ public class SemaforoCalleUrquiza {
         this.cola = cola;
     }
 
-
+    public double getProxCambioDeSemaforo() {
+        return proxCambioDeSemaforo;
+    }
 }

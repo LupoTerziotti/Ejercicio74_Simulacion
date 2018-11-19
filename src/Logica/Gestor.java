@@ -107,7 +107,7 @@ public class Gestor {
                 case "Cambio de Semaforo a Verde Calle Colón":
                     CambioAVerdeCalleColón cambioAVerdeCalleColón= new CambioAVerdeCalleColón(servidorSemaforoCalleCólon);
                     this.setEventoActual(cambioAVerdeCalleColón);
-                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleCólon.getProxCambioDeSemaforoAVerde());
+                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleCólon.getProxCambioDeSemaforo());
                     this.getConjuntoEventos().add(getEventoActual().getNombre());
                     this.getEventoActual().ejecutar();
                     break;
@@ -115,7 +115,7 @@ public class Gestor {
                 case "Cambio de Semaforo a Amarillo Calle Colón":
                     CambioAAmarilloCalleColón cambioAAmarilloCalleColón= new CambioAAmarilloCalleColón(servidorSemaforoCalleCólon);
                     this.setEventoActual(cambioAAmarilloCalleColón);
-                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleCólon.getProxCambioDeSemaforoAAmarillo());
+                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleCólon.getProxCambioDeSemaforo());
                     this.getConjuntoEventos().add(getEventoActual().getNombre());
                     this.getEventoActual().ejecutar();
                     break;
@@ -123,7 +123,7 @@ public class Gestor {
                 case "Cambio de Semaforo a Rojo Calle Colón":
                     CambioAARojoCalleColón cambioAARojoCalleColón= new CambioAARojoCalleColón(servidorSemaforoCalleCólon);
                     this.setEventoActual(cambioAARojoCalleColón);
-                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleCólon.getProxCambioDeSemaforoARojo());
+                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleCólon.getProxCambioDeSemaforo());
                     this.getConjuntoEventos().add(getEventoActual().getNombre());
                     this.getEventoActual().ejecutar();
                     break;
@@ -131,7 +131,7 @@ public class Gestor {
                 case "Cambio de Semaforo a Verde Calle Urquiza":
                     CambioAVerdeCalleUrquiza cambioAVerdeCalleUrquiza= new CambioAVerdeCalleUrquiza(servidorSemaforoCalleUrquiza);
                     this.setEventoActual(cambioAVerdeCalleUrquiza);
-                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAVerde());
+                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo());
                     this.getConjuntoEventos().add(getEventoActual().getNombre());
                     this.getEventoActual().ejecutar();
                     break;
@@ -139,7 +139,7 @@ public class Gestor {
                 case "Cambio de Semaforo a Amarillo Calle Urquiza":
                     CambioAAmarilloCalleUrquiza cambioAAmarilloCalleUrquiza=new CambioAAmarilloCalleUrquiza(servidorSemaforoCalleUrquiza);
                     this.setEventoActual(cambioAAmarilloCalleUrquiza);
-                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAAmarillo());
+                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo());
                     this.getConjuntoEventos().add(getEventoActual().getNombre());
                     this.getEventoActual().ejecutar();
                     break;
@@ -147,7 +147,7 @@ public class Gestor {
                 case "Cambio de Semaforo a Rojo Calle Urquiza":
                     CambioARojoCalleUrquiza cambioARojoCalleUrquiza = new CambioARojoCalleUrquiza (servidorSemaforoCalleUrquiza);
                     this.setEventoActual(cambioARojoCalleUrquiza);
-                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoARojo());
+                    Reloj.getInstancia().setTiempoActual(servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo());
                     this.getConjuntoEventos().add(getEventoActual().getNombre());
                     this.getEventoActual().ejecutar();
                     break;
@@ -190,11 +190,11 @@ public class Gestor {
             return "Cambio de Semaforo a Amarillo Calle Colón";
         }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
             return "Cambio de Semaforo a Rojo Calle Colón";
-        }else if (tiempo == servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAVerde()) {
+        }else if (tiempo == servidorSemaforoCalleUrquiza.getProxCambioDeSemaforo()) {
             return "Cambio de Semaforo a Verde Calle Urquiza";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforoAAmarillo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
             return "Cambio de Semaforo a Amarillo Calle Urquiza";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforoARojo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
             return "Cambio de Semaforo a Rojo Calle Urquiza";
         }else if (tiempo == llegadaDeAutoCalleColón.getProxLlegadaAuto()) {
             return "Llegada Auto Calle Colón";
