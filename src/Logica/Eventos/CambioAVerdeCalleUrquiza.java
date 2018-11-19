@@ -14,7 +14,8 @@ public class CambioAVerdeCalleUrquiza extends Evento {
     }
     public void ejecutar()
     {
-        semaforoCalleUrquiza.setEstadoSemaforo(EstadoSemaforo.EnVerde);
+        this.semaforoCalleUrquiza.setEstadoSemaforo(EstadoSemaforo.EnVerde);
+        this.semaforoCalleUrquiza.calcularProxCambioDeEstado();
     }
     public String getNombre()
     {

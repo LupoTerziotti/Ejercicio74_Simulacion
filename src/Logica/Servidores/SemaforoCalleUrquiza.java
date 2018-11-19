@@ -21,9 +21,39 @@ public class SemaforoCalleUrquiza {
         this.estadoSemaforo = EstadoSemaforo.EnRojo;
         this.tiempoEnEstado = 0;
         this.proxCambioDeSemaforo = 0;
+        this.cantidadDeAutos=0;
         this.cola = new LinkedList<Auto>();
     }
 
+    public void calcularProxCambioDeEstado()
+    {
+        if(estadoSemaforo==EstadoSemaforo.EnVerde)
+        {
+            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoAmarillo());
+        }
+        if(estadoSemaforo==EstadoSemaforo.EnAmarillo)
+        {
+            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoRojo());
+        }
+        if(estadoSemaforo==EstadoSemaforo.EnRojo)
+        {
+            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoVerde());
+        }
+    }
+    public int tiempoAmarillo()
+    {
+        return 10;
+    }
+
+    public int tiempoVerde()
+    {
+        return 25;
+    }
+
+    public int tiempoRojo()
+    {
+        return 55;
+    }
 
     public EstadoSemaforo getEstadoSemaforo() {
         return estadoSemaforo;
@@ -74,5 +104,6 @@ public class SemaforoCalleUrquiza {
     public void setCola(LinkedList<Auto> cola) {
         this.cola = cola;
     }
+
 
 }

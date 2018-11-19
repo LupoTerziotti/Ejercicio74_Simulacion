@@ -10,7 +10,6 @@ import util.Fila;
 import java.util.ArrayList;
 
 public class Gestor {
-    //prueba
 
     private int cantAutosCruzados;
     private double tiempoPermanencia;
@@ -112,6 +111,7 @@ public class Gestor {
                     this.getConjuntoEventos().add(getEventoActual().getNombre());
                     this.getEventoActual().ejecutar();
                     break;
+
                 case "Cambio de Semaforo a Amarillo Calle Colón":
                     CambioAAmarilloCalleColón cambioAAmarilloCalleColón= new CambioAAmarilloCalleColón(servidorSemaforoCalleCólon);
                     this.setEventoActual(cambioAAmarilloCalleColón);
@@ -158,9 +158,7 @@ public class Gestor {
 
     public double tiempoMinimo() {
         double minTiempo = 25920000;   //seteo el tiempo minimo en un valor bien alto para que pueda funcionar
-        if (servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAAmarillo() != 0) {
-            minTiempo = servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAAmarillo();
-        }
+
         if (servidorSemaforoCalleCólon.getProxCambioDeSemaforo() < minTiempo && servidorSemaforoCalleCólon.getProxCambioDeSemaforo() !=0) {
             minTiempo = servidorSemaforoCalleCólon.getProxCambioDeSemaforo();
         }
@@ -186,11 +184,11 @@ public class Gestor {
     public String proxEvento() {
         double tiempo = tiempoMinimo();
 
-        if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforoAVerde()) {
+        if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
             return "Cambio de Semaforo a Verde Calle Colón";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforoAAmarillo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
             return "Cambio de Semaforo a Amarillo Calle Colón";
-        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforoARojo()) {
+        }else if (tiempo == servidorSemaforoCalleCólon.getProxCambioDeSemaforo()) {
             return "Cambio de Semaforo a Rojo Calle Colón";
         }else if (tiempo == servidorSemaforoCalleUrquiza.getProxCambioDeSemaforoAVerde()) {
             return "Cambio de Semaforo a Verde Calle Urquiza";

@@ -14,8 +14,8 @@ public class CambioAAmarilloCalleColón extends Evento {
     }
     public void ejecutar()
     {
-        semaforoCalleColón.setEstadoSemaforo(EstadoSemaforo.EnAmarillo);
-
+        this.semaforoCalleColón.setEstadoSemaforo(EstadoSemaforo.EnAmarillo);
+        this.semaforoCalleColón.calcularProxCambioDeEstado();
     }
     public String getNombre()
     {

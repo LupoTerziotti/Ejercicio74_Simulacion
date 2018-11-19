@@ -10,6 +10,7 @@ public class CambioAAmarilloCalleUrquiza extends Evento {
 
     public CambioAAmarilloCalleUrquiza(SemaforoCalleUrquiza semaforoCalleUrquiza) {
         this.semaforoCalleUrquiza=semaforoCalleUrquiza;
+        this.semaforoCalleUrquiza.calcularProxCambioDeEstado();
     }
     public void ejecutar()
     {

@@ -2,10 +2,7 @@ package Logica.Eventos;
 
 import Logica.EstadoSemaforo;
 import Logica.Evento;
-import Logica.Reloj;
 import Logica.Servidores.SemaforoCalleColón;
-
-import java.util.EmptyStackException;
 
 public class CruceDeInterseccionCalleColón extends Evento {
 
@@ -47,12 +44,12 @@ public class CruceDeInterseccionCalleColón extends Evento {
             this.proxCruce= tiempoCruce+relojActual;
         }
     }
+
     public String getNombre()
     {
         String nombre= "Cruce De Interseccion Calle Colón";
         return nombre;
     }
-
 
     public SemaforoCalleColón getSemaforoCalleColón() {
         return semaforoCalleColón;
@@ -71,11 +68,8 @@ public class CruceDeInterseccionCalleColón extends Evento {
     }
 
     public double getProxCruce() {
-
         return proxCruce;
     }
-
-
 
     public void setProxCruce(double proxCruce) {
         this.proxCruce = proxCruce;

@@ -3,6 +3,7 @@ package Logica.Servidores;
 import Logica.Auto;
 import Logica.EstadoSemaforo;
 import Logica.Reloj;
+import com.sun.org.apache.regexp.internal.RE;
 
 import java.util.LinkedList;
 
@@ -21,6 +22,7 @@ public class SemaforoCalleColón {
         this.estadoSemaforo = EstadoSemaforo.EnVerde;
         this.tiempoEnEstado = 0;
         this.proxCambioDeSemaforo = 0;
+        this.cantidadDeAutos=0;
         this.cola = new LinkedList<Auto>();
     }
 
@@ -42,15 +44,7 @@ public class SemaforoCalleColón {
     }
 
     public double getProxCambioDeSemaforo() {
-        if(EstadoSemaforo.EnVerde == getEstadoSemaforo())
-        {
-            return tiempoEnEstado+tiempoAmarillo();
-        }else if(EstadoSemaforo.EnAmarillo==getEstadoSemaforo())
-        {
-            return tiempoEnEstado+tiempoRojo();
-        }else {
-            return tiempoEnEstado+tiempoVerde();
-        }
+        return proxCambioDeSemaforo;
     }
 
     public double getProxCambioDeSemaforoAVerde()
@@ -78,6 +72,22 @@ public class SemaforoCalleColón {
         cola.add(a);
         cantidadDeAutos++;
 
+    }
+
+    public void calcularProxCambioDeEstado()
+    {
+        if(estadoSemaforo==EstadoSemaforo.EnVerde)
+        {
+            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoAmarillo());
+        }
+        if(estadoSemaforo==EstadoSemaforo.EnAmarillo)
+        {
+            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoRojo());
+        }
+        if(estadoSemaforo==EstadoSemaforo.EnRojo)
+        {
+            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoVerde());
+        }
     }
 
 
