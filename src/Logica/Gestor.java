@@ -10,6 +10,7 @@ import util.Fila;
 import java.util.ArrayList;
 
 public class Gestor {
+    //prueba
 
     private int cantAutosCruzados;
     private double tiempoPermanencia;
