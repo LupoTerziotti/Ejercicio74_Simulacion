@@ -1,10 +1,9 @@
-package Logica.Eventos;
+package logica.eventos;
 
-import Logica.Auto;
-import Logica.EstadoSemaforo;
-import Logica.Evento;
-import Logica.Reloj;
-import Logica.Servidores.SemaforoCalleUrquiza;
+import logica.Auto;
+import logica.Evento;
+import logica.Reloj;
+import logica.servidores.SemaforoCalleUrquiza;
 
 public class LlegadaDeAutoCalleUrquiza extends Evento {
 

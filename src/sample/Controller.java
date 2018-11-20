@@ -1,7 +1,7 @@
 package sample;
 
-import Logica.Gestor;
-import Logica.Reloj;
+import logica.Gestor;
+import logica.Reloj;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

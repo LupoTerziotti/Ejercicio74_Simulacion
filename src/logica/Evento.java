@@ -1,4 +1,4 @@
-package Logica;
+package logica;
 
 public abstract class Evento implements Comparable<Evento>
 {

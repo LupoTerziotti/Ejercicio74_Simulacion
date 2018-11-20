@@ -1,12 +1,12 @@
-package Logica.Servidores;
+package logica.servidores;
 
-import Logica.Auto;
-import Logica.EstadoSemaforo;
-import Logica.Reloj;
+import logica.Auto;
+import logica.EstadoSemaforo;
+import logica.Reloj;
 
 import java.util.LinkedList;
 
-public class SemaforoCalleColon {
+public class SemaforoCalleUrquiza {
 
     private EstadoSemaforo estadoSemaforo;
     private double tiempoEnEstado;
@@ -14,11 +14,42 @@ public class SemaforoCalleColon {
     private int cantidadDeAutos;
     private LinkedList<Auto> cola;
 
-    public SemaforoCalleColon() {
-        this.estadoSemaforo = EstadoSemaforo.EnVerde;
-        this.tiempoEnEstado = tiempoVerde();
+    public SemaforoCalleUrquiza() {
+        this.estadoSemaforo = EstadoSemaforo.EnRojo;
+        this.tiempoEnEstado = tiempoRojo();
         this.proxCambioDeSemaforo = getProxCambioDeSemaforo();
         this.cola = new LinkedList<Auto>();
+    }
+
+
+    public double getProxCambioDeSemaforo() {
+        if(EstadoSemaforo.EnVerde == getEstadoSemaforo())
+        {
+            return tiempoEnEstado+tiempoAmarillo();
+        }else if(EstadoSemaforo.EnAmarillo==getEstadoSemaforo())
+        {
+            return tiempoEnEstado+tiempoRojo();
+        }else {
+            return tiempoEnEstado+tiempoVerde();
+        }
+    }
+    public int tiempoAmarillo()
+    {
+        return 10;
+    }
+
+    public int tiempoVerde()
+    {
+        return 45;
+    }
+
+    public int tiempoRojo()
+    {
+        return 35;
+    }
+    public void calcularProxCambioDeEstado()
+    {
+        setProxCambioDeSemaforo(this.getTiempoEnEstado()+Reloj.getInstancia().getTiempoActual());
     }
 
 
@@ -36,18 +67,6 @@ public class SemaforoCalleColon {
 
     public void setTiempoEnEstado(double tiempoEnEstado) {
         this.tiempoEnEstado = tiempoEnEstado;
-    }
-
-    public double getProxCambioDeSemaforo() {
-        if(EstadoSemaforo.EnVerde == getEstadoSemaforo())
-        {
-            return tiempoEnEstado+tiempoAmarillo();
-        }else if(EstadoSemaforo.EnAmarillo==getEstadoSemaforo())
-        {
-            return tiempoEnEstado+tiempoRojo();
-        }else {
-            return tiempoEnEstado+tiempoVerde();
-        }
     }
 
     public double getProxCambioDeSemaforoAVerde()
@@ -74,13 +93,7 @@ public class SemaforoCalleColon {
     {
         cola.add(a);
         cantidadDeAutos++;
-
     }
-    public void calcularProxCambioDeEstado()
-    {
-        setProxCambioDeSemaforo(this.getTiempoEnEstado()+Reloj.getInstancia().getTiempoActual());
-    }
-
 
     public LinkedList<Auto> getCola() {
         return cola;
@@ -90,18 +103,4 @@ public class SemaforoCalleColon {
         this.cola = cola;
     }
 
-    public int tiempoAmarillo()
-    {
-        return 10;
-    }
-
-    public int tiempoVerde()
-    {
-        return 25;
-    }
-
-    public int tiempoRojo()
-    {
-        return 55;
-    }
 }

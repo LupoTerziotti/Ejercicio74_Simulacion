@@ -1,8 +1,8 @@
-package Logica.Eventos;
+package logica.eventos;
 
-import Logica.EstadoSemaforo;
-import Logica.Evento;
-import Logica.Servidores.SemaforoCalleColon;
+import logica.EstadoSemaforo;
+import logica.Evento;
+import logica.servidores.SemaforoCalleColon;
 
 public class CambioAAmarilloCalleColon extends Evento {
 

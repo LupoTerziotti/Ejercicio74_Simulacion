@@ -1,9 +1,9 @@
-package Logica.Eventos;
+package logica.eventos;
 
-import Logica.Auto;
-import Logica.Evento;
-import Logica.Reloj;
-import Logica.Servidores.SemaforoCalleColon;
+import logica.Auto;
+import logica.Evento;
+import logica.Reloj;
+import logica.servidores.SemaforoCalleColon;
 
 public class LlegadaDeAutoCalleColon extends Evento {
 

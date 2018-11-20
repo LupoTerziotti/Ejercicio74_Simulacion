@@ -1,8 +1,8 @@
-package Logica;
+package logica;
 
-import Logica.Eventos.*;
-import Logica.Servidores.SemaforoCalleColon;
-import Logica.Servidores.SemaforoCalleUrquiza;
+import logica.eventos.*;
+import logica.servidores.SemaforoCalleColon;
+import logica.servidores.SemaforoCalleUrquiza;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import util.Fila;
