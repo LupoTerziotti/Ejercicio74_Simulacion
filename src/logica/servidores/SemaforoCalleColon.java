@@ -10,14 +10,14 @@ public class SemaforoCalleColon {
 
     private EstadoSemaforo estadoSemaforo;
     private double tiempoEnEstado;
-    private double proxCambioDeSemaforo;
+    private double proxCambioDeEstado;
     private int cantidadDeAutos;
     private LinkedList<Auto> cola;
 
     public SemaforoCalleColon() {
         this.estadoSemaforo = EstadoSemaforo.EnVerde;
         this.tiempoEnEstado = tiempoVerde();
-        this.proxCambioDeSemaforo = getProxCambioDeSemaforo();
+        calcularProxCambioDeEstado();
         this.cola = new LinkedList<Auto>();
     }
 
@@ -31,6 +31,7 @@ public class SemaforoCalleColon {
     }
 
     public double getTiempoEnEstado() {
+        calcularTiempoEnEstado();
         return tiempoEnEstado;
     }
 
@@ -38,36 +39,20 @@ public class SemaforoCalleColon {
         this.tiempoEnEstado = tiempoEnEstado;
     }
 
-    public double getProxCambioDeSemaforo() {
+    public void calcularTiempoEnEstado() {
         if(EstadoSemaforo.EnVerde == getEstadoSemaforo())
         {
-            return tiempoEnEstado+tiempoAmarillo();
+             tiempoEnEstado=tiempoAmarillo();
         }else if(EstadoSemaforo.EnAmarillo==getEstadoSemaforo())
         {
-            return tiempoEnEstado+tiempoRojo();
+            tiempoEnEstado=tiempoRojo();
         }else {
-            return tiempoEnEstado+tiempoVerde();
+            tiempoEnEstado=tiempoVerde();
         }
     }
 
-    public double getProxCambioDeSemaforoAVerde()
-    {
-        return Reloj.getInstancia().getTiempoActual()+90;
-    }
-
-    public double getProxCambioDeSemaforoAAmarillo()
-    {
-        return Reloj.getInstancia().getTiempoActual()+90;
-    }
-
-    public double getProxCambioDeSemaforoARojo()
-    {
-        return Reloj.getInstancia().getTiempoActual()+90;
-    }
-
-
-    public void setProxCambioDeSemaforo(double proxCambioDeSemaforo) {
-        this.proxCambioDeSemaforo = proxCambioDeSemaforo;
+    public void setProxCambioDeEstado(double proxCambioDeEstado) {
+        this.proxCambioDeEstado = proxCambioDeEstado;
     }
 
     public void agregarACola(Auto a)
@@ -78,7 +63,7 @@ public class SemaforoCalleColon {
     }
     public void calcularProxCambioDeEstado()
     {
-        setProxCambioDeSemaforo(this.getTiempoEnEstado()+Reloj.getInstancia().getTiempoActual());
+        setProxCambioDeEstado(this.getTiempoEnEstado()+Reloj.getInstancia().getTiempoActual());
     }
 
 
@@ -90,18 +75,31 @@ public class SemaforoCalleColon {
         this.cola = cola;
     }
 
-    public int tiempoAmarillo()
+    public double tiempoAmarillo()
     {
         return 10;
     }
 
-    public int tiempoVerde()
+    public double tiempoVerde()
     {
         return 25;
     }
 
-    public int tiempoRojo()
+    public double tiempoRojo()
     {
         return 55;
+    }
+
+
+    public double getProxCambioDeEstado() {
+        return proxCambioDeEstado;
+    }
+
+    public int getCantidadDeAutos() {
+        return cantidadDeAutos;
+    }
+
+    public void setCantidadDeAutos(int cantidadDeAutos) {
+        this.cantidadDeAutos = cantidadDeAutos;
     }
 }

@@ -2,6 +2,7 @@ package logica.eventos;
 
 import logica.EstadoSemaforo;
 import logica.Evento;
+import logica.Reloj;
 import logica.servidores.SemaforoCalleUrquiza;
 
 public class CruceDeInterseccionCalleUrquiza extends Evento {
@@ -15,21 +16,22 @@ public class CruceDeInterseccionCalleUrquiza extends Evento {
 
         this.semaforoCalleUrquiza = semaforoCalleUrquiza;
         calcularTiempoCruce();
+        calcularProximoCruce(Reloj.getInstancia().getTiempoActual());
     }
 
     public void ejecutar()
     {
-        if(semaforoCalleUrquiza.getCola().size() >= 3 && semaforoCalleUrquiza.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
+        if(semaforoCalleUrquiza.getCola().size() >= 3  )
         {
             semaforoCalleUrquiza.getCola().pollFirst();
             semaforoCalleUrquiza.getCola().pollFirst();
             semaforoCalleUrquiza.getCola().pollFirst();
 
-        }else if(semaforoCalleUrquiza.getCola().size() >= 2 && semaforoCalleUrquiza.getEstadoSemaforo()==EstadoSemaforo.EnVerde)
+        }else if(semaforoCalleUrquiza.getCola().size() >= 2 )
         {
             semaforoCalleUrquiza.getCola().pollFirst();
             semaforoCalleUrquiza.getCola().pollFirst();
-        }else if(semaforoCalleUrquiza.getEstadoSemaforo()==EstadoSemaforo.EnVerde)
+        }else if(semaforoCalleUrquiza.getCola().size()==1)
         {
             semaforoCalleUrquiza.getCola().pollFirst();
         }
@@ -39,11 +41,11 @@ public class CruceDeInterseccionCalleUrquiza extends Evento {
     public void calcularTiempoCruce()
     {
         this.setRandomCruce(Math.random());
-        double demora = (3.5 + this.getRandomCruce()) * 3600;
+        double demora = (3.5 + this.getRandomCruce()*3600) ;
         this.tiempoCruce = (demora / 60);
     }
 
-    public void CalcluarProximoCruce(double relojActual) {
+    public void calcularProximoCruce(double relojActual) {
         if(semaforoCalleUrquiza.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
         {
             setProxCruce(tiempoCruce+relojActual);
@@ -73,6 +75,7 @@ public class CruceDeInterseccionCalleUrquiza extends Evento {
     }
 
     public double getProxCruce() {
+        calcularProximoCruce(Reloj.getInstancia().getTiempoActual());
         return proxCruce;
     }
 
@@ -86,5 +89,14 @@ public class CruceDeInterseccionCalleUrquiza extends Evento {
 
     public void setRandomCruce(double randomCruce) {
         this.randomCruce = randomCruce;
+    }
+
+    public String getTiempoCruce1()
+    {
+        return Reloj.tiempoString(getTiempoCruce());
+    }
+    public String getProxCruce1()
+    {
+        return Reloj.tiempoString(getTiempoCruce());
     }
 }

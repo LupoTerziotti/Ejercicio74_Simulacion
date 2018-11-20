@@ -21,7 +21,7 @@ public class Controller implements Initializable {
     private Gestor gestor;
 
     public Controller() {
-        this.gestor = new Gestor();
+
         this.tvSim = new TableView<Fila>();
     }
 
@@ -154,10 +154,10 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    void simulacionOnAction(ActionEvent event) {
+    public void simulacionOnAction(ActionEvent event) {
 
         this.initializeNewSimulation();//true porque es la simulacion comun
-        this.setStats();
+     //   this.setStats();
     }
 
     public void setearDias()
@@ -185,14 +185,14 @@ public class Controller implements Initializable {
     }
 
     private void resetSimulation() {
-        txAvgDurationService.setText("0");
-        txCamionesNoAtendidos.setText("0");
-        txCamionesTotales.setText("0");
-        txCamionesXDia.setText("0");
+//        txAvgDurationService.setText("0");
+//        txCamionesNoAtendidos.setText("0");
+//        txCamionesTotales.setText("0");
+//        txCamionesXDia.setText("0");
 
         Reloj.resetearReloj();
         this.gestor = new Gestor();
-        this.setearDias();
+        //this.setearDias();
         clearItemsInTableView();
         cargarTabla();
 

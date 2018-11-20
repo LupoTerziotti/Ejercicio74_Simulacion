@@ -17,13 +17,13 @@ public class LlegadaDeAutoCalleColon extends Evento {
     public LlegadaDeAutoCalleColon(SemaforoCalleColon semaforoCalleColon) {
         this.semaforoCalleColon = semaforoCalleColon;
         this.auto=generarAuto();
+
     }
 
     public void ejecutar()
     {
-
+        this.auto=generarAuto();
         semaforoCalleColon.agregarACola(auto);
-
     }
 
     public String getNombre()
@@ -44,13 +44,13 @@ public class LlegadaDeAutoCalleColon extends Evento {
     public void calcularTiempoLlegadaAuto()
     {
         this.setRandomLlegada(Math.random());
-        double demora = (2 + 2* this.getRandomLlegada()) * 3600;
+        double demora = (2 + 2* this.getRandomLlegada()*3600) ;
         this.tiempoLlegada = (demora / 60);
     }
 
     public void calcularProxLlegadaAuto()
     {
-        setProxLlegadaAuto(this.getTiempoLlegada()+Reloj.getInstancia().getTiempoActual());
+        setProxLlegadaAuto(this.getTiempoLlegada()+ Reloj.getInstancia().getTiempoActual());
     }
 
 
@@ -93,5 +93,15 @@ public class LlegadaDeAutoCalleColon extends Evento {
 
     public void setRandomLlegada(double randomLlegada) {
         this.randomLlegada = randomLlegada;
+    }
+
+    public String getTiempoLlegada1()
+    {
+        return Reloj.tiempoString(getTiempoLlegada());
+    }
+
+    public String getProxLlegadaAuto1()
+    {
+        return Reloj.tiempoString(getProxLlegadaAuto());
     }
 }

@@ -20,16 +20,9 @@ public class Reloj {
     }
 
     public Reloj() {
-        this.tiempoActual = 43200.00;//12HS
+        this.tiempoActual = 28800;//8HS
     }
 
-    public Reloj(boolean alternativa) {
-        if (alternativa) {
-            this.tiempoActual = 43200.00;//12HS
-        } else {
-            this.tiempoActual = 18000.00;//5HS
-        }
-    }
 
     public static Reloj getInstancia() {
         if (instancia == null) {

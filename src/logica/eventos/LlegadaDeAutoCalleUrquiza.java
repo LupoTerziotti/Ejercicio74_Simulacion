@@ -42,7 +42,9 @@ public class LlegadaDeAutoCalleUrquiza extends Evento {
 
     public void ejecutar()
     {
+        this.auto=generarAuto();
         semaforoCalleUrquiza.agregarACola(getAuto());
+
     }
     public String getNombre()
     {
@@ -63,7 +65,7 @@ public class LlegadaDeAutoCalleUrquiza extends Evento {
     public void calcularTiempoLlegadaAuto()
     {
         this.setRandomLlegada(Math.random());
-        double demora = (1 + 2 * this.getRandomLlegada()) * 3600;
+        double demora = (1 + 2 * this.getRandomLlegada() *3600 ) ;
         this.tiempoLlegada = (demora / 60);
     }
 
@@ -103,5 +105,16 @@ public class LlegadaDeAutoCalleUrquiza extends Evento {
 
     public void setRandomLlegada(double randomLlegada) {
         this.randomLlegada = randomLlegada;
+    }
+
+    public String getTiempoLlegada1()
+    {
+        return Reloj.tiempoString(getTiempoLlegada());
+    }
+
+
+    public String getProxLlegadaAuto1()
+    {
+        return Reloj.tiempoString(getProxLlegadaAuto());
     }
 }
