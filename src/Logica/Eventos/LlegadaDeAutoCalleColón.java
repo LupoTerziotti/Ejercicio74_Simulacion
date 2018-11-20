@@ -22,10 +22,8 @@ public class LlegadaDeAutoCalleColón extends Evento {
 
     public void ejecutar()
     {
-        if(semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnAmarillo || semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnRojo)
-        {
-            semaforoCalleColón.agregarACola(auto);
-        }
+
+        semaforoCalleColón.agregarACola(auto);
 
     }
 

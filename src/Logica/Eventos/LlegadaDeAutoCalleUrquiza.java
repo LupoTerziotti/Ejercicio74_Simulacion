@@ -21,6 +21,7 @@ public class LlegadaDeAutoCalleUrquiza extends Evento {
 
         this.contadorAutos++;
         this.semaforoCalleUrquiza=semaforoCalleUrquiza;
+        this.auto=generarAuto();
 
     }
 
@@ -42,13 +43,7 @@ public class LlegadaDeAutoCalleUrquiza extends Evento {
 
     public void ejecutar()
     {
-        if(semaforoCalleUrquiza.getEstadoSemaforo()== EstadoSemaforo.EnRojo || semaforoCalleUrquiza.getEstadoSemaforo()==EstadoSemaforo.EnAmarillo)
-        {
-            semaforoCalleUrquiza.agregarACola(getAuto());
-        }
-
-
-
+        semaforoCalleUrquiza.agregarACola(getAuto());
     }
     public String getNombre()
     {

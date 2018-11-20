@@ -49,7 +49,6 @@ public class Gestor {
         this.getConjuntoEventos().add(this.getEventoActual().getNombre());
         Reloj.getInstancia().setTiempoActual(llegadaDeAutoCalleUrquiza.getProxLlegadaAuto());
         llegadaDeAutoCalleUrquiza.ejecutar();
-        this.llegadaDeAutoCalleUrquiza.setAuto(llegadaDeAutoCalleUrquiza.generarAuto());
         //this.cargarFila(true);
         iterar();
     }

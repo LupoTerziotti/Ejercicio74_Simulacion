@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="13bffd6e-f675-41d5-a991-738000dfa310" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="13bffd6e-f675-41d5-a991-738000dfa310" name="Default Changelist" comment="Creacion de Trabajo Practico de Simulacion">
+      <change beforePath="$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleColón.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleColón.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleUrquiza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleUrquiza.java" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/Logica/Gestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Gestor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,21 +62,33 @@
         </counts>
       </usages-collector>
     </session>
+<<<<<<< Updated upstream
     <session id="-1513275967">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.4" value="1" />
+=======
+    <session id="-1015884200">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+>>>>>>> Stashed changes
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< Updated upstream
           <entry key="java" value="544" />
           <entry key="txt" value="298" />
+=======
+          <entry key="java" value="56" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< Updated upstream
           <entry key="JAVA" value="544" />
           <entry key="PLAIN_TEXT" value="298" />
         </counts>
@@ -83,6 +101,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="79" />
+=======
+          <entry key="JAVA" value="56" />
+>>>>>>> Stashed changes
         </counts>
       </usages-collector>
     </session>
@@ -95,8 +116,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Logica/Gestor.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="428">
               <caret line="196" column="159" selection-start-line="196" selection-start-column="159" selection-end-line="196" selection-end-column="159" />
+=======
+            <state relative-caret-position="227">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,8 +133,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="75">
               <caret line="9" column="37" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="37" />
+=======
+            <state relative-caret-position="60">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -116,13 +150,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="341">
               <caret line="95" column="23" lean-forward="true" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+=======
+            <state relative-caret-position="-549">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="e#836#837#0" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1108#1109#0" expanded="true" />
+                <element signature="e#1948#1949#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
+                <element signature="e#2182#2183#0" expanded="true" />
+                <element signature="e#2220#2221#0" expanded="true" />
+                <element signature="e#2282#2283#0" expanded="true" />
+                <element signature="e#2336#2337#0" expanded="true" />
+                <element signature="e#2365#2366#0" expanded="true" />
+                <element signature="e#2392#2393#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#2462#2463#0" expanded="true" />
+                <element signature="e#2502#2503#0" expanded="true" />
+                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="e#2596#2597#0" expanded="true" />
+                <element signature="e#2646#2647#0" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/CambioAAmarilloCalleColón.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -130,10 +190,17 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleColón.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200">
+              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleUrquiza.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -143,6 +210,13 @@
                 <element signature="e#836#837#0" expanded="true" />
                 <element signature="e#872#873#0" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleColón.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -150,8 +224,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleUrquiza.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="705">
               <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+=======
+            <state relative-caret-position="525">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#2664#2665#0" expanded="true" />
                 <element signature="e#2707#2708#0" expanded="true" />
@@ -163,8 +242,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logica/Evento.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="465">
               <caret line="39" column="39" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="39" selection-end-column="39" />
+=======
+            <state relative-caret-position="165">
+              <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -172,8 +261,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleColón.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="84">
               <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+=======
+            <state relative-caret-position="165">
+              <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -181,6 +278,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleColón.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="667">
               <caret line="98" column="17" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="17" />
               <folding>
@@ -188,6 +286,15 @@
                 <element signature="e#1269#1270#0" expanded="true" />
                 <element signature="e#2609#2610#0" expanded="true" />
                 <element signature="e#2634#2635#0" expanded="true" />
+=======
+            <state relative-caret-position="-217">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
+                <element signature="e#1349#1350#0" expanded="true" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
@@ -196,8 +303,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/CambioAVerdeCalleColón.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="150">
               <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+=======
+            <state relative-caret-position="75">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#302#303#0" expanded="true" />
@@ -264,11 +376,20 @@
         <option value="$PROJECT_DIR$/src/Logica/Eventos/CambioAARojoCalleColón.java" />
         <option value="$PROJECT_DIR$/src/Logica/Eventos/CruceDeInterseccionCalleUrquiza.java" />
         <option value="$PROJECT_DIR$/src/Logica/Eventos/CruceDeInterseccionCalleColón.java" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/src/Logica/Eventos/CambioARojoCalleUrquiza.java" />
         <option value="$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleUrquiza.java" />
         <option value="$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleColón.java" />
         <option value="$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleUrquiza.java" />
         <option value="$PROJECT_DIR$/src/Logica/Gestor.java" />
+=======
+        <option value="$PROJECT_DIR$/src/Logica/Eventos/CambioAAmarilloCalleColón.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleUrquiza.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleColón.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Gestor.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleUrquiza.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleColón.java" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -758,6 +879,7 @@
       <workItem from="1542571889751" duration="1594000" />
       <workItem from="1542574515834" duration="307000" />
       <workItem from="1542652465012" duration="4268000" />
+<<<<<<< Updated upstream
       <workItem from="1542657834299" duration="6149000" />
     </task>
     <task id="LOCAL-00001" summary="Prueba">
@@ -787,15 +909,25 @@
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1542669676152</updated>
+=======
+      <workItem from="1542674852960" duration="265000" />
+>>>>>>> Stashed changes
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="41160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="35276000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+>>>>>>> Stashed changes
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -803,7 +935,11 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50136983" side_tool="true" weight="0.25767368" />
       <window_info id="Image Layers" order="4" />
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49863014" visible="true" weight="0.24474959" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49863014" visible="true" weight="0.2657512" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="6" sideWeight="0.50136983" side_tool="true" weight="0.25767368" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -877,6 +1013,15 @@
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+<<<<<<< Updated upstream
+=======
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Logica/Gestor.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+>>>>>>> Stashed changes
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -981,10 +1126,46 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/CambioAVerdeCalleUrquiza.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+=======
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/CruceDeInterseccionCalleColón.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logica/Reloj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/CambioAARojoCalleColón.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -993,8 +1174,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/CambioARojoCalleUrquiza.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+=======
+        <state relative-caret-position="165">
+          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1003,8 +1189,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleUrquiza.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="705">
           <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+=======
+        <state relative-caret-position="75">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#2664#2665#0" expanded="true" />
             <element signature="e#2707#2708#0" expanded="true" />
@@ -1012,6 +1203,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/Logica/Evento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1033,20 +1225,51 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/Logica/Servidores/SemaforoCalleColón.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleUrquiza.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="-71">
           <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding>
             <element signature="e#836#837#0" expanded="true" />
             <element signature="e#872#873#0" expanded="true" />
+=======
+        <state relative-caret-position="-549">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2182#2183#0" expanded="true" />
+            <element signature="e#2220#2221#0" expanded="true" />
+            <element signature="e#2282#2283#0" expanded="true" />
+            <element signature="e#2336#2337#0" expanded="true" />
+            <element signature="e#2365#2366#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2502#2503#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2646#2647#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/CambioAVerdeCalleColón.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1055,12 +1278,21 @@
             <element signature="imports" expanded="true" />
             <element signature="e#302#303#0" expanded="true" />
             <element signature="e#359#360#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Logica/Gestor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="75">
           <caret line="9" column="37" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="37" />
         </state>
@@ -1093,6 +1325,23 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="-217">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/LlegadaDeAutoCalleColón.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

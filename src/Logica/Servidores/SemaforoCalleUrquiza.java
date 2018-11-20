@@ -16,25 +16,21 @@ public class SemaforoCalleUrquiza {
 
     public SemaforoCalleUrquiza() {
         this.estadoSemaforo = EstadoSemaforo.EnRojo;
-        this.tiempoEnEstado = 0;
-        this.proxCambioDeSemaforo = 0;
-        this.cantidadDeAutos=0;
+        this.tiempoEnEstado = tiempoRojo();
+        this.proxCambioDeSemaforo = getProxCambioDeSemaforo();
         this.cola = new LinkedList<Auto>();
     }
 
-    public void calcularProxCambioDeEstado()
-    {
-        if(estadoSemaforo==EstadoSemaforo.EnVerde)
+
+    public double getProxCambioDeSemaforo() {
+        if(EstadoSemaforo.EnVerde == getEstadoSemaforo())
         {
-            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoAmarillo());
-        }
-        if(estadoSemaforo==EstadoSemaforo.EnAmarillo)
+            return tiempoEnEstado+tiempoAmarillo();
+        }else if(EstadoSemaforo.EnAmarillo==getEstadoSemaforo())
         {
-            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoRojo());
-        }
-        if(estadoSemaforo==EstadoSemaforo.EnRojo)
-        {
-            setProxCambioDeSemaforo(Reloj.getInstancia().getTiempoActual()+tiempoVerde());
+            return tiempoEnEstado+tiempoRojo();
+        }else {
+            return tiempoEnEstado+tiempoVerde();
         }
     }
     public int tiempoAmarillo()
@@ -44,13 +40,14 @@ public class SemaforoCalleUrquiza {
 
     public int tiempoVerde()
     {
-        return 25;
+        return 45;
     }
 
     public int tiempoRojo()
     {
-        return 55;
+        return 35;
     }
+
 
     public EstadoSemaforo getEstadoSemaforo() {
         return estadoSemaforo;
@@ -67,6 +64,22 @@ public class SemaforoCalleUrquiza {
     public void setTiempoEnEstado(double tiempoEnEstado) {
         this.tiempoEnEstado = tiempoEnEstado;
     }
+
+    public double getProxCambioDeSemaforoAVerde()
+    {
+        return Reloj.getInstancia().getTiempoActual()+90;
+    }
+
+    public double getProxCambioDeSemaforoAAmarillo()
+    {
+        return Reloj.getInstancia().getTiempoActual()+90;
+    }
+
+    public double getProxCambioDeSemaforoARojo()
+    {
+        return Reloj.getInstancia().getTiempoActual()+90;
+    }
+
 
     public void setProxCambioDeSemaforo(double proxCambioDeSemaforo) {
         this.proxCambioDeSemaforo = proxCambioDeSemaforo;
@@ -86,7 +99,4 @@ public class SemaforoCalleUrquiza {
         this.cola = cola;
     }
 
-    public double getProxCambioDeSemaforo() {
-        return proxCambioDeSemaforo;
-    }
 }
