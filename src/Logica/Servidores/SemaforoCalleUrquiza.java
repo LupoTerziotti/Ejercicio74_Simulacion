@@ -47,6 +47,10 @@ public class SemaforoCalleUrquiza {
     {
         return 35;
     }
+    public void calcularProxCambioDeEstado()
+    {
+        setProxCambioDeSemaforo(this.getTiempoEnEstado()+Reloj.getInstancia().getTiempoActual());
+    }
 
 
     public EstadoSemaforo getEstadoSemaforo() {

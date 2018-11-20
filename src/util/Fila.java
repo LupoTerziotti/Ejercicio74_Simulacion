@@ -8,14 +8,14 @@ public class Fila {
     private final SimpleStringProperty event;
     private final SimpleStringProperty auto;
     private final SimpleStringProperty rnd1;
-    private final SimpleStringProperty tiempoEntreLlegadasCalleColón;
-    private final SimpleStringProperty proxAutoCalleColón;
-    private final SimpleStringProperty autoCalleColón;
-    private final SimpleStringProperty estadoSemaforoCalleColón;
-    private final SimpleStringProperty rndCruceCalleColón;
-    private final SimpleStringProperty tiempoDeCruceCalleColón;
-    private final SimpleStringProperty proxCruceCalleColón;
-    private final SimpleStringProperty colaSemaforoCalleColón;
+    private final SimpleStringProperty tiempoEntreLlegadasCalleColon;
+    private final SimpleStringProperty proxAutoCalleColon;
+    private final SimpleStringProperty autoCalleColon;
+    private final SimpleStringProperty estadoSemaforoCalleColon;
+    private final SimpleStringProperty rndCruceCalleColon;
+    private final SimpleStringProperty tiempoDeCruceCalleColon;
+    private final SimpleStringProperty proxCruceCalleColon;
+    private final SimpleStringProperty colaSemaforoCalleColon;
     private final SimpleStringProperty rnd2;
     private final SimpleStringProperty tiempoEntreLlegadasCalleUrquiza;
     private final SimpleStringProperty proxAutoCalleUrquiza;
@@ -50,14 +50,14 @@ public class Fila {
         this.event = new SimpleStringProperty(event);
         this.auto = new SimpleStringProperty(auto);
         this.rnd1 = new SimpleStringProperty(rnd1);
-        this.tiempoEntreLlegadasCalleColón = new SimpleStringProperty(tiempoEntreLlegadasCalleColón);
-        this.proxAutoCalleColón = new SimpleStringProperty(proxAutoCalleColón);
-        this.autoCalleColón = new SimpleStringProperty(autoCalleColón);
-        this.estadoSemaforoCalleColón = new SimpleStringProperty(estadoSemaforoCalleColón);
-        this.rndCruceCalleColón = new SimpleStringProperty(rndCruceCalleColón);
-        this.tiempoDeCruceCalleColón = new SimpleStringProperty(tiempoDeCruceCalleColón);
-        this.proxCruceCalleColón = new SimpleStringProperty(proxCruceCalleColón);
-        this.colaSemaforoCalleColón = new SimpleStringProperty(colaSemaforoCalleColón);
+        this.tiempoEntreLlegadasCalleColon = new SimpleStringProperty(tiempoEntreLlegadasCalleColón);
+        this.proxAutoCalleColon = new SimpleStringProperty(proxAutoCalleColón);
+        this.autoCalleColon = new SimpleStringProperty(autoCalleColón);
+        this.estadoSemaforoCalleColon = new SimpleStringProperty(estadoSemaforoCalleColón);
+        this.rndCruceCalleColon = new SimpleStringProperty(rndCruceCalleColón);
+        this.tiempoDeCruceCalleColon = new SimpleStringProperty(tiempoDeCruceCalleColón);
+        this.proxCruceCalleColon = new SimpleStringProperty(proxCruceCalleColón);
+        this.colaSemaforoCalleColon = new SimpleStringProperty(colaSemaforoCalleColón);
         this.rnd2 = new SimpleStringProperty(rnd2);
         this.tiempoEntreLlegadasCalleUrquiza = new SimpleStringProperty(tiempoEntreLlegadasCalleUrquiza);
         this.proxAutoCalleUrquiza = new SimpleStringProperty(proxAutoCalleUrquiza);
@@ -117,100 +117,104 @@ public class Fila {
         this.rnd1.set(rnd1);
     }
 
-    public String getTiempoEntreLlegadasCalleColón() {
-        return tiempoEntreLlegadasCalleColón.get();
+    public String getTiempoEntreLlegadasCalleColon() {
+        return tiempoEntreLlegadasCalleColon.get();
     }
 
     public SimpleStringProperty tiempoEntreLlegadasCalleColónProperty() {
-        return tiempoEntreLlegadasCalleColón;
+        return tiempoEntreLlegadasCalleColon;
     }
 
-    public void setTiempoEntreLlegadasCalleColón(String tiempoEntreLlegadasCalleColón) {
-        this.tiempoEntreLlegadasCalleColón.set(tiempoEntreLlegadasCalleColón);
+    public SimpleStringProperty tiempoEntreLlegadasCalleColonProperty() {
+        return tiempoEntreLlegadasCalleColon;
     }
 
-    public String getProxAutoCalleColón() {
-        return proxAutoCalleColón.get();
+    public void setTiempoEntreLlegadasCalleColon(String tiempoEntreLlegadasCalleColon) {
+        this.tiempoEntreLlegadasCalleColon.set(tiempoEntreLlegadasCalleColon);
     }
 
-    public SimpleStringProperty proxAutoCalleColónProperty() {
-        return proxAutoCalleColón;
+    public String getProxAutoCalleColon() {
+        return proxAutoCalleColon.get();
     }
 
-    public void setProxAutoCalleColón(String proxAutoCalleColón) {
-        this.proxAutoCalleColón.set(proxAutoCalleColón);
+    public SimpleStringProperty proxAutoCalleColonProperty() {
+        return proxAutoCalleColon;
     }
 
-    public String getAutoCalleColón() {
-        return autoCalleColón.get();
+    public void setProxAutoCalleColon(String proxAutoCalleColon) {
+        this.proxAutoCalleColon.set(proxAutoCalleColon);
     }
 
-    public SimpleStringProperty autoCalleColónProperty() {
-        return autoCalleColón;
+    public String getAutoCalleColon() {
+        return autoCalleColon.get();
     }
 
-    public void setAutoCalleColón(String autoCalleColón) {
-        this.autoCalleColón.set(autoCalleColón);
+    public SimpleStringProperty autoCalleColonProperty() {
+        return autoCalleColon;
     }
 
-    public String getEstadoSemaforoCalleColón() {
-        return estadoSemaforoCalleColón.get();
+    public void setAutoCalleColon(String autoCalleColon) {
+        this.autoCalleColon.set(autoCalleColon);
     }
 
-    public SimpleStringProperty estadoSemaforoCalleColónProperty() {
-        return estadoSemaforoCalleColón;
+    public String getEstadoSemaforoCalleColon() {
+        return estadoSemaforoCalleColon.get();
     }
 
-    public void setEstadoSemaforoCalleColón(String estadoSemaforoCalleColón) {
-        this.estadoSemaforoCalleColón.set(estadoSemaforoCalleColón);
+    public SimpleStringProperty estadoSemaforoCalleColonProperty() {
+        return estadoSemaforoCalleColon;
     }
 
-    public String getRndCruceCalleColón() {
-        return rndCruceCalleColón.get();
+    public void setEstadoSemaforoCalleColon(String estadoSemaforoCalleColon) {
+        this.estadoSemaforoCalleColon.set(estadoSemaforoCalleColon);
     }
 
-    public SimpleStringProperty rndCruceCalleColónProperty() {
-        return rndCruceCalleColón;
+    public String getRndCruceCalleColon() {
+        return rndCruceCalleColon.get();
     }
 
-    public void setRndCruceCalleColón(String rndCruceCalleColón) {
-        this.rndCruceCalleColón.set(rndCruceCalleColón);
+    public SimpleStringProperty rndCruceCalleColonProperty() {
+        return rndCruceCalleColon;
     }
 
-    public String getTiempoDeCruceCalleColón() {
-        return tiempoDeCruceCalleColón.get();
+    public void setRndCruceCalleColon(String rndCruceCalleColon) {
+        this.rndCruceCalleColon.set(rndCruceCalleColon);
     }
 
-    public SimpleStringProperty tiempoDeCruceCalleColónProperty() {
-        return tiempoDeCruceCalleColón;
+    public String getTiempoDeCruceCalleColon() {
+        return tiempoDeCruceCalleColon.get();
     }
 
-    public void setTiempoDeCruceCalleColón(String tiempoDeCruceCalleColón) {
-        this.tiempoDeCruceCalleColón.set(tiempoDeCruceCalleColón);
+    public SimpleStringProperty tiempoDeCruceCalleColonProperty() {
+        return tiempoDeCruceCalleColon;
     }
 
-    public String getProxCruceCalleColón() {
-        return proxCruceCalleColón.get();
+    public void setTiempoDeCruceCalleColon(String tiempoDeCruceCalleColon) {
+        this.tiempoDeCruceCalleColon.set(tiempoDeCruceCalleColon);
     }
 
-    public SimpleStringProperty proxCruceCalleColónProperty() {
-        return proxCruceCalleColón;
+    public String getProxCruceCalleColon() {
+        return proxCruceCalleColon.get();
     }
 
-    public void setProxCruceCalleColón(String proxCruceCalleColón) {
-        this.proxCruceCalleColón.set(proxCruceCalleColón);
+    public SimpleStringProperty proxCruceCalleColonProperty() {
+        return proxCruceCalleColon;
     }
 
-    public String getColaSemaforoCalleColón() {
-        return colaSemaforoCalleColón.get();
+    public void setProxCruceCalleColon(String proxCruceCalleColon) {
+        this.proxCruceCalleColon.set(proxCruceCalleColon);
     }
 
-    public SimpleStringProperty colaSemaforoCalleColónProperty() {
-        return colaSemaforoCalleColón;
+    public String getColaSemaforoCalleColon() {
+        return colaSemaforoCalleColon.get();
     }
 
-    public void setColaSemaforoCalleColón(String colaSemaforoCalleColón) {
-        this.colaSemaforoCalleColón.set(colaSemaforoCalleColón);
+    public SimpleStringProperty colaSemaforoCalleColonProperty() {
+        return colaSemaforoCalleColon;
+    }
+
+    public void setColaSemaforoCalleColon(String colaSemaforoCalleColon) {
+        this.colaSemaforoCalleColon.set(colaSemaforoCalleColon);
     }
 
     public String getRnd2() {

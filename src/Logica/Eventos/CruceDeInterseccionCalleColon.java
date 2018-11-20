@@ -2,30 +2,30 @@ package Logica.Eventos;
 
 import Logica.EstadoSemaforo;
 import Logica.Evento;
-import Logica.Servidores.SemaforoCalleColón;
+import Logica.Servidores.SemaforoCalleColon;
 
-public class CruceDeInterseccionCalleColón extends Evento {
+public class CruceDeInterseccionCalleColon extends Evento {
 
-    private SemaforoCalleColón semaforoCalleColón;
+    private SemaforoCalleColon semaforoCalleColon;
     private double tiempoCruce;
     private double proxCruce;
     private double randomCruce;
 
-    public CruceDeInterseccionCalleColón( SemaforoCalleColón semaforoCalleColón) {
+    public CruceDeInterseccionCalleColon(SemaforoCalleColon semaforoCalleColon) {
 
-        this.semaforoCalleColón = semaforoCalleColón;
+        this.semaforoCalleColon = semaforoCalleColon;
         calcularTiempoCruce();
     }
 
     public void ejecutar()
     {
-        if(semaforoCalleColón.getCola().size() >= 2 && semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
+        if(semaforoCalleColon.getCola().size() >= 2 && semaforoCalleColon.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
         {
-            this.semaforoCalleColón.getCola().pollFirst();
-            this.semaforoCalleColón.getCola().pollFirst();
-        }else if(semaforoCalleColón.getEstadoSemaforo()==EstadoSemaforo.EnVerde)
+            this.semaforoCalleColon.getCola().pollFirst();
+            this.semaforoCalleColon.getCola().pollFirst();
+        }else if(semaforoCalleColon.getEstadoSemaforo()==EstadoSemaforo.EnVerde)
         {
-            this.semaforoCalleColón.getCola().pollFirst();
+            this.semaforoCalleColon.getCola().pollFirst();
         }
     }
 
@@ -38,7 +38,7 @@ public class CruceDeInterseccionCalleColón extends Evento {
     }
 
     public void CalcluarProximoCruce(double relojActual) {
-        if(semaforoCalleColón.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
+        if(semaforoCalleColon.getEstadoSemaforo()== EstadoSemaforo.EnVerde)
         {
             setProxCruce(tiempoCruce+relojActual);
         }
@@ -50,12 +50,12 @@ public class CruceDeInterseccionCalleColón extends Evento {
         return nombre;
     }
 
-    public SemaforoCalleColón getSemaforoCalleColón() {
-        return semaforoCalleColón;
+    public SemaforoCalleColon getSemaforoCalleColon() {
+        return semaforoCalleColon;
     }
 
-    public void setSemaforoCalleColón(SemaforoCalleColón semaforoCalleColón) {
-        this.semaforoCalleColón = semaforoCalleColón;
+    public void setSemaforoCalleColon(SemaforoCalleColon semaforoCalleColon) {
+        this.semaforoCalleColon = semaforoCalleColon;
     }
 
     public double getTiempoCruce() {

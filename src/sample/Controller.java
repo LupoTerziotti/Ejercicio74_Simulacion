@@ -55,21 +55,21 @@ public class Controller implements Initializable {
     @FXML
     private TableColumn<Fila, String> rnd1;
     @FXML
-    private TableColumn<Fila, String> tiempoEntreLlegadasCalleColón;
+    private TableColumn<Fila, String> tiempoEntreLlegadasCalleColon;
     @FXML
-    private TableColumn<Fila, String> proxAutoCalleColón;
+    private TableColumn<Fila, String> proxAutoCalleColon;
     @FXML
-    private TableColumn<Fila, String> autoCalleColón;
+    private TableColumn<Fila, String> autoCalleColon;
     @FXML
-    private TableColumn<Fila, String> estadoSemaforoCalleColón;
+    private TableColumn<Fila, String> estadoSemaforoCalleColon;
     @FXML
-    private TableColumn<Fila, String> rndCruceCalleColón;
+    private TableColumn<Fila, String> rndCruceCalleColon;
     @FXML
-    private TableColumn<Fila, String> tiempoDeCruceCalleColón;
+    private TableColumn<Fila, String> tiempoDeCruceCalleColon;
     @FXML
-    private TableColumn<Fila, String> proxCruceCalleColón;
+    private TableColumn<Fila, String> proxCruceCalleColon;
     @FXML
-    private TableColumn<Fila, String> colaSemaforoCalleColón;
+    private TableColumn<Fila, String> colaSemaforoCalleColon;
     @FXML
     private TableColumn<Fila, String> rnd2;
     @FXML
@@ -106,17 +106,17 @@ public class Controller implements Initializable {
         dia.setCellValueFactory(new PropertyValueFactory<>("dia"));
         reloj.setCellValueFactory(new PropertyValueFactory<>("reloj"));
         event.setCellValueFactory(new PropertyValueFactory<>("event"));
-        colaSemaforoCalleColón.setCellValueFactory(new PropertyValueFactory<>("colaSemaforoCalleColón"));
+        colaSemaforoCalleColon.setCellValueFactory(new PropertyValueFactory<>("colaSemaforoCalleColón"));
         rnd1.setCellValueFactory(new PropertyValueFactory<>("rnd1"));
         auto.setCellValueFactory(new PropertyValueFactory<>("auto"));
-        tiempoEntreLlegadasCalleColón.setCellValueFactory(new PropertyValueFactory<>("tiempoEntreLlegadasCalleColón"));
-        proxAutoCalleColón.setCellValueFactory(new PropertyValueFactory<>("proxAutoCalleColón"));
-        autoCalleColón.setCellValueFactory(new PropertyValueFactory<>("autoCalleColón"));
-        estadoSemaforoCalleColón.setCellValueFactory(new PropertyValueFactory<>("estadoSemaforoCalleColón"));
-        rndCruceCalleColón.setCellValueFactory(new PropertyValueFactory<>("rndCruceCalleColón"));
-        tiempoDeCruceCalleColón.setCellValueFactory(new PropertyValueFactory<>("tiempoDeCruceCalleColón"));
-        proxCruceCalleColón.setCellValueFactory(new PropertyValueFactory<>("proxCruceCalleColón"));
-        colaSemaforoCalleColón.setCellValueFactory(new PropertyValueFactory<>("colaSemaforoCalleColón"));
+        tiempoEntreLlegadasCalleColon.setCellValueFactory(new PropertyValueFactory<>("tiempoEntreLlegadasCalleColón"));
+        proxAutoCalleColon.setCellValueFactory(new PropertyValueFactory<>("proxAutoCalleColón"));
+        autoCalleColon.setCellValueFactory(new PropertyValueFactory<>("autoCalleColón"));
+        estadoSemaforoCalleColon.setCellValueFactory(new PropertyValueFactory<>("estadoSemaforoCalleColón"));
+        rndCruceCalleColon.setCellValueFactory(new PropertyValueFactory<>("rndCruceCalleColón"));
+        tiempoDeCruceCalleColon.setCellValueFactory(new PropertyValueFactory<>("tiempoDeCruceCalleColón"));
+        proxCruceCalleColon.setCellValueFactory(new PropertyValueFactory<>("proxCruceCalleColón"));
+        colaSemaforoCalleColon.setCellValueFactory(new PropertyValueFactory<>("colaSemaforoCalleColón"));
         rnd2.setCellValueFactory(new PropertyValueFactory<>("rnd2"));
         tiempoEntreLlegadasCalleUrquiza.setCellValueFactory(new PropertyValueFactory<>("tiempoEntreLlegadasCalleUrquiza"));
         autoCalleUrquiza.setCellValueFactory(new PropertyValueFactory<>("autoCalleUrquiza"));

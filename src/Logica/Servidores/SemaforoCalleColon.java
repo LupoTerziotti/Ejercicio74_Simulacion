@@ -6,7 +6,7 @@ import Logica.Reloj;
 
 import java.util.LinkedList;
 
-public class SemaforoCalleColón {
+public class SemaforoCalleColon {
 
     private EstadoSemaforo estadoSemaforo;
     private double tiempoEnEstado;
@@ -14,7 +14,7 @@ public class SemaforoCalleColón {
     private int cantidadDeAutos;
     private LinkedList<Auto> cola;
 
-    public SemaforoCalleColón() {
+    public SemaforoCalleColon() {
         this.estadoSemaforo = EstadoSemaforo.EnVerde;
         this.tiempoEnEstado = tiempoVerde();
         this.proxCambioDeSemaforo = getProxCambioDeSemaforo();
@@ -76,7 +76,10 @@ public class SemaforoCalleColón {
         cantidadDeAutos++;
 
     }
-
+    public void calcularProxCambioDeEstado()
+    {
+        setProxCambioDeSemaforo(this.getTiempoEnEstado()+Reloj.getInstancia().getTiempoActual());
+    }
 
 
     public LinkedList<Auto> getCola() {

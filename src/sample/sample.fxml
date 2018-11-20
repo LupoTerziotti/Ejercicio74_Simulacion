@@ -25,14 +25,14 @@
                         <TableColumn fx:id="event" prefWidth="190.0" text="Evento" />
                         <TableColumn fx:id="auto" prefWidth="75.0" text="Auto" />
                         <TableColumn fx:id="rnd1" prefWidth="75.0" text="RND" />
-                        <TableColumn fx:id="tiempoEntreLlegadasCalleColón" prefWidth="75.0" text="T.Entre Llegadas Calle Colón" />
-                        <TableColumn fx:id="proxAutoCalleColón" prefWidth="75.0" text="Proxima Llegada de Auto en  Colón" />
-                        <TableColumn fx:id="autoCalleColón" prefWidth="75.0" text="Auto" />
-                        <TableColumn fx:id="estadoSemaforoCalleColón" prefWidth="75.0" text="Estado Semaforo Calle Colón" />
-                        <TableColumn fx:id="rndCruceCalleColón" prefWidth="75.0" text="Rnd" />
-                        <TableColumn fx:id="tiempoDeCruceCalleColón" prefWidth="75.0" text="Tiempo de Cruce Calle Colón" />
-                        <TableColumn fx:id="proxCruceCalleColón" prefWidth="75.0" text="Proximo Cruce Calle Colón" />
-                        <TableColumn fx:id="colaSemaforoCalleColón" prefWidth="75.0" text="Cola Semaforo Calle Colón" />
+                        <TableColumn fx:id="tiempoEntreLlegadasCalleColon" prefWidth="75.0" text="T.Entre Llegadas Calle Colón" />
+                        <TableColumn fx:id="proxAutoCalleColon" prefWidth="75.0" text="Proxima Llegada de Auto en  Colón" />
+                        <TableColumn fx:id="autoCalleColon" prefWidth="75.0" text="Auto" />
+                        <TableColumn fx:id="estadoSemaforoCalleColon" prefWidth="75.0" text="Estado Semaforo Calle Colón" />
+                        <TableColumn fx:id="rndCruceCalleColon" prefWidth="75.0" text="Rnd" />
+                        <TableColumn fx:id="tiempoDeCruceCalleColon" prefWidth="75.0" text="Tiempo de Cruce Calle Colón" />
+                        <TableColumn fx:id="proxCruceCalleColon" prefWidth="75.0" text="Proximo Cruce Calle Colón" />
+                        <TableColumn fx:id="colaSemaforoCalleColon" prefWidth="75.0" text="Cola Semaforo Calle Colón" />
                         <TableColumn fx:id="rnd2" prefWidth="75.0" text="RND" />
                         <TableColumn fx:id="tiempoEntreLlegadasCalleUrquiza" prefWidth="75.0" text="Tiempo Entre Llegadas Calle Urquiza" />
                         <TableColumn fx:id="proxAutoCalleUrquiza" prefWidth="75.0" text="Proxima Llegada de Auto en Urquiza" />

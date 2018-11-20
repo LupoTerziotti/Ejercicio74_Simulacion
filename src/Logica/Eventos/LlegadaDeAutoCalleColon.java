@@ -1,29 +1,28 @@
 package Logica.Eventos;
 
 import Logica.Auto;
-import Logica.EstadoSemaforo;
 import Logica.Evento;
 import Logica.Reloj;
-import Logica.Servidores.SemaforoCalleColón;
+import Logica.Servidores.SemaforoCalleColon;
 
-public class LlegadaDeAutoCalleColón extends Evento {
+public class LlegadaDeAutoCalleColon extends Evento {
 
     private double tiempoLlegada;
     private int contadorAutos ;
     private double proxLlegadaAuto;
     private Auto auto;
     private double randomLlegada;
-    private SemaforoCalleColón semaforoCalleColón;
+    private SemaforoCalleColon semaforoCalleColon;
 
-    public LlegadaDeAutoCalleColón(SemaforoCalleColón semaforoCalleColón) {
-        this.semaforoCalleColón = semaforoCalleColón;
+    public LlegadaDeAutoCalleColon(SemaforoCalleColon semaforoCalleColon) {
+        this.semaforoCalleColon = semaforoCalleColon;
         this.auto=generarAuto();
     }
 
     public void ejecutar()
     {
 
-        semaforoCalleColón.agregarACola(auto);
+        semaforoCalleColon.agregarACola(auto);
 
     }
 
